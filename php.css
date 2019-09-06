@@ -1,0 +1,42 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height:100vh;
+    box-sizing: border-box;
+}
+.main_php{
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.php_cont{
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #777777;
+    padding: 1em;
+}
+.php_cont p {
+    color: green;
+    font-size: 20px;
+}
+.php_cont p span{
+    color: #fff;
+}
+
+@media screen and (max-width:"500px"){
+    .main_php{
+        display: block;
+    }
+    .php_cont{
+        width:300px;
+    }
+    p{
+        font-size: 12px;
+    }
+}
