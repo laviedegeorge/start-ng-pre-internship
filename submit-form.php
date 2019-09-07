@@ -9,15 +9,27 @@
 </head>
 <body>
     <div class="main_php">
-        
+
             <div class="php_cont">
-            <p>NAME: <span><?php echo $_POST["name"]; ?></span></p>
-            <p>E-MAIL: <span><?php echo $_POST["e_mail"]; ?></span> </p>
-            <P>TITLE: <span><?php echo $_POST["title"]; ?></span></P>
-            <P> MESSAGE: <span><?php echo $_POST["message"]; ?></span></P>
+            <p>Thanks for reaching out <?php echo $_POST["name"]; ?> </p>
             </div>
         
     </div>
+    <?php 
+    $name = $_POST["name"];
+    $e_mail = $_POST["e_mail"];
+    $title = $_POST["title"];
+    $message = $_POST["message"];
+
+    $file = fopen("php.md", "a");
+
+    fwrite($file,$name);
+    fwrite($file,$e_mail);
+    fwrite($file, $title);
+    fwrite($file,$message);
+    
+    fclose($file);
+    ?>
 </body>
 </html>
     
